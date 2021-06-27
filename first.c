@@ -9,6 +9,6 @@ int main()
         c = getchar();
         arr[i++] = c;
     }
-    a[i] = '\0';
+    arr[i] = '\0';
     printf("%s", arr);
 }
