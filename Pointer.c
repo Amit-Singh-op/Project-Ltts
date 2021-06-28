@@ -4,5 +4,6 @@ int main()
     int *p;
     int t = 20;
     p = &t;
-    printf("%d", *p);
+    int **p1 = &p;
+    printf("%d", **p1);
 }
