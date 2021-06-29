@@ -227,7 +227,7 @@ void main()
             else
             {
                 printf("Sorry! you press invalid character");
-                printf(" Try again\n");
+                printf("Try again\n");
                 goto Again;
             }
         }
