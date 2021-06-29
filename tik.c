@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
-char tic[9] = {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
+char tic[9] = {'1', '2', '3', '4', '5', '6', '7', '8', '9'};
 char sign, place;
 int check()
 {
@@ -109,7 +109,7 @@ int check()
         if (sign == 'x')
         {
             printf("\nCongrats! ");
-            printf("1 user is win the game\n");
+            printf("1 user win the game\n");
         }
         else
         {
