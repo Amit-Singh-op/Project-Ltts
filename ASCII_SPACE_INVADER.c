@@ -22,9 +22,24 @@ void ShowConsoleCursor(bool showFlag)
     cursorInfo.bVisible = showFlag; // set the cursor visibility
     SetConsoleCursorInfo(out, &cursorInfo);
 }
+/*
+void remove_scrollbar()
+{
+    HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
+    CONSOLE_SCREEN_BUFFER_INFO info;
+    GetConsoleScreenBufferInfo(handle, &info);
+    COORD new_size = 
+    {
+        info.srWindow.Right - info.srWindow.Left + 1,
+        info.srWindow.Bottom - info.srWindow.Top + 1
+    };
+    SetConsoleScreenBufferSize(handle, new_size);
+}
+*/
 int main()
 {
     ShowConsoleCursor(false);
+    //remove_scrollbar();
     int sizey = 23;
     int sizex = 40;
     int x, y, yi;
@@ -132,10 +147,10 @@ int main()
         /*display world*/
         system("cls");
         printf("     SCORE:    %d", score);
-        printf("\n");
+        printf("\n\n");
         for (y = 0; y < sizey; y++)
         {
-            printf("|");
+            printf("\t\t\t\t\t|");
             for (x = 0; x < sizex; x++)
             {
                 printf("%c", world[y][x]);
