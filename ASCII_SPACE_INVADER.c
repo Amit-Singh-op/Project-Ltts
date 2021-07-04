@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
-
+#include <stdbool.h>
+#include <windows.h>
 void delay(unsigned int milliseconds)
 {
     clock_t start = clock();
@@ -71,11 +72,17 @@ int main()
     for (c = 0; s[c] != '\0'; c++)
     {
         printf("%c", s[c]);
-        delay(300);
+        delay(250);
     }
     Sleep(1000);
     printf("\n\n\n\n\n\n\t\t Press any key to start.");
     getch();
+    
+    
+   // system("MODE 45,25");
+   //	ShowScrollBar(GetConsoleWindow(), SB_VERT, 0);
+	
+	//printf("helllllo");
 
     /*initialise earth*/
 }
