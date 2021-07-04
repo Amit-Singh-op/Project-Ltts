@@ -1,25 +1,41 @@
+//#include "fun.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
 #include <windows.h>
 #include <stdbool.h>
 #include <time.h>
+
 void delay(unsigned int milliseconds)
 {
     clock_t start = clock();
     while ((clock() - start) * 1000 / CLOCKS_PER_SEC < milliseconds)
         ;
 }
+void ShowConsoleCursor(bool showFlag)
+{
+    HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
+
+    CONSOLE_CURSOR_INFO cursorInfo;
+
+    GetConsoleCursorInfo(out, &cursorInfo);
+    cursorInfo.bVisible = showFlag; // set the cursor visibility
+    SetConsoleCursorInfo(out, &cursorInfo);
+}
 int main()
 {
+    ShowConsoleCursor(false);
     int sizey = 23;
     int sizex = 40;
     int x, y, yi;
     char world[sizey][sizex];
-    char player = 'A';
+    char player = '+';
+    system("color 0a");
+    //getch();
+    //printf("\033[33mThis is yellow\033[0m");
     char playerLaser = '^';
-    char enemy = 'M';
-    char enemyShielded = 'O';
+    char enemy = 'E';
+    char enemyShielded = 'B';
     char enemyLaser = 'U';
     char explosion = 'X';
     int score = 0;
