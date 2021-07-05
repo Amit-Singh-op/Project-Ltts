@@ -1,10 +1,17 @@
-//#include "fun.h"
+#include "fun.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
 #include <windows.h>
 #include <stdbool.h>
 #include <time.h>
+
+void ClearScreen()
+{
+    int n;
+    for (n = 0; n < 10; n++)
+        printf("\n\n\n\n\n\n\n\n\n\n");
+}
 
 void delay(unsigned int milliseconds)
 {
@@ -43,7 +50,11 @@ int main()
     int sizey = 23;
     int sizex = 40;
     int x, y, yi;
-    char world[sizey][sizex];
+    //char world[sizey][sizex];
+    char **world = (char **)malloc(sizey * sizeof(char *));
+    for (int r = 0; r < sizey; r++)
+        world[r] = (char *)malloc(sizex * sizeof(char));
+
     char player = '+';
     system("color 0a");
     //getch();
@@ -70,13 +81,13 @@ int main()
     */
 
     printf("\t\t\t\t                _ _   _                     _               \n");
-    sleep(1);
+    Sleep(400);
     printf("\t\t\t\t  __ _ ___  ___(_|_) (_)_ ____   ____ _  __| | ___ _ __ ___ \n");
-    sleep(1);
+    Sleep(400);
     printf("\t\t\t\t / _` / __|/ __| | | | | '_ \\ \\ / / _` |/ _` |/ _ \\ '__/ __|\n");
-    sleep(1);
+    Sleep(400);
     printf("\t\t\t\t| (_| \\__ \\ (__| | | | | | | \\ V / (_| | (_| |  __/ |  \\__ \\\n");
-    sleep(1);
+    Sleep(400);
     printf("\t\t\t\t \\__,_|___/\\___|_|_| |_|_| |_|\\_/ \\__,_|\\__,_|\\___|_|  |___/\n");
 
     /*welcome screen*/
@@ -133,11 +144,17 @@ int main()
             }
         }
     }
+    //Initial(sizex, sizey, &totalEnemies, enemy, enemyShielded, world);
+
     world[sizey - 1][sizex / 2] = player;
     int i = 1;
     char direction = 'l';
     char keyPress;
     int currentEnemies = totalEnemies;
+    //int currentEnemies = 1;
+
+    //printf("%d", totalEnemies);
+
     while (currentEnemies > 0 && victory)
     {
         int drop = 0;
@@ -145,18 +162,25 @@ int main()
         laserReady++;
 
         /*display world*/
+        //Sleep(2000);
+        /*
         system("cls");
         printf("     SCORE:    %d", score);
         printf("\n\n");
-        for (y = 0; y < sizey; y++)
+        for (int y = 0; y < sizey; y++)
         {
             printf("\t\t\t\t\t|");
-            for (x = 0; x < sizex; x++)
+            for (int x = 0; x < sizex; x++)
             {
                 printf("%c", world[y][x]);
             }
+
             printf("|");
             printf("\n");
         }
+*/
+        display(sizex, sizey, score, world);
+
+        /**/
     }
 }
