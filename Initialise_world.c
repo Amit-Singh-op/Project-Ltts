@@ -12,7 +12,7 @@ void Initial(int sizex, int sizey, int *totalEnemies, char enemy, char enemyShie
             if ((y + 1) % 2 == 0 && y < 7 && x > 4 && x < sizex - 5 && x % 2 == 0)
             {
                 world[y][x] = enemy;
-                *totalEnemies++;
+                *totalEnemies = *totalEnemies + 1;
             }
             else if ((y + 1) % 2 == 0 && y >= 7 && y < 9 && x > 4 && x < sizex - 5 && x % 2 == 0)
             {
