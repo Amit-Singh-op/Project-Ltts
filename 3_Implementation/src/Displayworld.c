@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <Windows.h>
 #include <stdbool.h>
-void display(int sizex, int sizey, int score, char **world)
+void display(int sizex, int sizey, int score, char (*world)[sizex])
 {
     system("cls");
     textcolor(11);

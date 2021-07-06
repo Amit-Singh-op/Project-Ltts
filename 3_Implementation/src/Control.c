@@ -5,7 +5,7 @@
 #include <Windows.h>
 #include <stdbool.h>
 #include <time.h>
-void control(int sizex, int sizey, char laserReady, char playerLaser, char player, char keyPress, char **world)
+void control(int sizex, int sizey, char laserReady, char playerLaser, char player, char keyPress, char (*world)[sizex])
 {
     if (kbhit())
     {
@@ -38,7 +38,7 @@ void control(int sizex, int sizey, char laserReady, char playerLaser, char playe
             }
         }
     }
-    if (keyPress == 'm' /*&& laserReady > 2*/)
+    if (keyPress == 'm' && laserReady > 2)
     {
         for (int x = 0; x < sizex; x = x + 1)
         {

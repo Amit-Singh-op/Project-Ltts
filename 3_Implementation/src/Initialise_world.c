@@ -3,7 +3,7 @@
 #include <Windows.h>
 #include <stdbool.h>
 
-void Initial(int sizex, int sizey, int *totalEnemies, char enemy, char enemyShielded, char **world)
+void Initial(int sizex, int sizey, int *totalEnemies, char enemy, char enemyShielded, char (*world)[sizex])
 {
     for (int x = 0; x < sizex; x++)
     {
