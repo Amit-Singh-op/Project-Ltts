@@ -5,5 +5,6 @@ void Initial(int sizex, int sizey, int *totalEnemies, char enemy, char enemyShie
 void display(int sizex, int sizey, int score, char **world);
 void textcolor(int color);
 void loadingBar();
+void control(int sizex, int sizey, char laserReady, char playerLaser, char player, char keyPress, char **world);
 
 #endif

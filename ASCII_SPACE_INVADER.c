@@ -122,7 +122,7 @@ int main()
     char keyPress;
     int currentEnemies = totalEnemies;
 
-    while (1)
+    while (currentEnemies > 0 && victory)
     {
         int drop = 0;
         int enemySpeed = 1 + 10 * currentEnemies / totalEnemies;
@@ -133,5 +133,9 @@ int main()
         display(sizex, sizey, score, world); //displaying world
 
         /**/
+
+        //player move and shoot
+        control(sizex, sizey, laserReady, playerLaser, player, keyPress, world);
+        /////
     }
 }
