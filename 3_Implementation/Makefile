@@ -5,7 +5,7 @@ SRC =src/Initialise_world.c \
 src/Displayworld.c \
 src/Color.c \
 src/Loading.c \
-src/control.c \
+src/Control.c \
 
 INC_H = inc
 
