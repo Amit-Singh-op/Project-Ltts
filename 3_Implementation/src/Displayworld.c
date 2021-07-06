@@ -1,6 +1,6 @@
 #include "fun.h"
 #include <stdio.h>
-#include <windows.h>
+#include <Windows.h>
 #include <stdbool.h>
 void display(int sizex, int sizey, int score, char **world)
 {

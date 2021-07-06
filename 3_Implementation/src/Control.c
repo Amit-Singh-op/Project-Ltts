@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
-#include <windows.h>
+#include <Windows.h>
 #include <stdbool.h>
 #include <time.h>
 void control(int sizex, int sizey, char laserReady, char playerLaser, char player, char keyPress, char **world)
