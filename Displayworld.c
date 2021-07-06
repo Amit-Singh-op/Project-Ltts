@@ -34,6 +34,11 @@ void display(int sizex, int sizey, int score, char **world)
                 textcolor(15);
                 printf("%c", world[y][x]);
             }
+            else if (world[y][x] == 'U')
+            {
+                textcolor(15);
+                printf("%c", world[y][x]);
+            }
             else
             {
                 textcolor(12);

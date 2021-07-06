@@ -20,6 +20,6 @@ void loadingBar()
     {
         //textcolor(9);
         printf("%c", b);
-        Sleep(500);
+        Sleep(200);
     }
 }

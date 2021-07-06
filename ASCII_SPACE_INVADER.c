@@ -122,7 +122,7 @@ int main()
     char keyPress;
     int currentEnemies = totalEnemies;
 
-    while (currentEnemies > 0 && victory)
+    while (1)
     {
         int drop = 0;
         int enemySpeed = 1 + 10 * currentEnemies / totalEnemies;
