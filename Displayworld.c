@@ -24,9 +24,19 @@ void display(int sizex, int sizey, int score, char **world)
                 textcolor(7);
                 printf("%c", world[y][x]);
             }
-            else
+            else if (world[y][x] == 'A')
             {
                 textcolor(14);
+                printf("%c", world[y][x]);
+            }
+            else if (world[y][x] == '*')
+            {
+                textcolor(15);
+                printf("%c", world[y][x]);
+            }
+            else
+            {
+                textcolor(12);
                 printf("%c", world[y][x]);
             }
         }

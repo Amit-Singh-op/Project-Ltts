@@ -54,9 +54,9 @@ int main()
     for (int r = 0; r < sizey; r++)
         world[r] = (char *)malloc(sizex * sizeof(char));
 
-    char player = '+';
+    char player = 'A';
     system("color 0a");
-    char playerLaser = '^';
+    char playerLaser = '*';
     char enemy = 'E';
     char enemyShielded = 'B';
     char enemyLaser = 'U';
