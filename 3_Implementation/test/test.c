@@ -6,3 +6,12 @@
 void setUp() {}
 /* Required by the unity test framework */
 void tearDown() {}
+
+void check() {}
+
+int main()
+{
+    UNITY_BEGIN();
+    RUN_TEST(check);
+    return UNITY_END();
+}
