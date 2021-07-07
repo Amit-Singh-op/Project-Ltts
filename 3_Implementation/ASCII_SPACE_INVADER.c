@@ -80,7 +80,7 @@ int main()
         printf("%c", s[c]);
         delay(250);
     }
-    //loadingBar(); //loading bar
+    loadingBar(); //loading bar
     /*printf("\n\n\n\n\t\t Press any key to start.");
     getch();
 
