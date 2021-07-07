@@ -145,5 +145,5 @@ int main()
     int bonus = totalEnemies * 20 - i;
     end(sizex, sizey, i, score, totalEnemies, bonus, victory, world);
 
-    /* */
+    /*  */
 }
