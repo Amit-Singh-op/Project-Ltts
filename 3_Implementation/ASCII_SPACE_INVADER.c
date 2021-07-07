@@ -28,34 +28,14 @@ void ShowConsoleCursor(bool showFlag)
     cursorInfo.bVisible = showFlag; // set the cursor visibility
     SetConsoleCursorInfo(out, &cursorInfo);
 }
-/*
-void remove_scrollbar()
-{
-    HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
-    CONSOLE_SCREEN_BUFFER_INFO info;
-    GetConsoleScreenBufferInfo(handle, &info);
-    COORD new_size = 
-    {
-        info.srWindow.Right - info.srWindow.Left + 1,
-        info.srWindow.Bottom - info.srWindow.Top + 1
-    };
-    SetConsoleScreenBufferSize(handle, new_size);
-}
-*/
 int main()
 {
     ShowConsoleCursor(false);
-    //remove_scrollbar();
-    int sizey = 23;
-    int sizex = 40;
+    const int sizey = 23;
+    const int sizex = 40;
     int x, y, yi;
     char world[sizey][sizex];
-    /*char **world = (char **)malloc(sizey * sizeof(char *));
-    for (int r = 0; r < sizey; r++)
-        world[r] = (char *)malloc(sizex * sizeof(char));
-*/
     char player = 'A';
-    system("color 0a");
     char playerLaser = '*';
     char enemy = 'E';
     char enemyShielded = 'B';
@@ -68,14 +48,9 @@ int main()
 
     srand(time(NULL));
 
+    /*welcome screen*/
+
     printf("\n\n\n");
-    /*
-    printf("\t\t\t\t                _ _   _                     _               \n");
-    printf("\t\t\t\t  __ _ ___  ___(_|_) (_)_ ____   ____ _  __| | ___ _ __ ___ \n");
-    printf("\t\t\t\t / _` / __|/ __| | | | | '_ \\ \\ / / _` |/ _` |/ _ \\ '__/ __|\n");
-    printf("\t\t\t\t| (_| \\__ \\ (__| | | | | | | \\ V / (_| | (_| |  __/ |  \\__ \\\n");
-    printf("\t\t\t\t \\__,_|___/\\___|_|_| |_|_| |_|\\_/ \\__,_|\\__,_|\\___|_|  |___/\n");
-    */
     textcolor(2);
     printf("\t\t\t\t                _ _   _                     _               \n");
     Sleep(1000);
@@ -91,7 +66,6 @@ int main()
     textcolor(2);
     printf("\t\t\t\t \\__,_|___/\\___|_|_| |_|_| |_|\\_/ \\__,_|\\__,_|\\___|_|  |___/\n");
 
-    /*welcome screen*/
     printf("\n\n");
     int c = 0;
     char s[] = {'\n', '\n', '\n', '\n', '\n', '\t', '\t', '"', 'C', 'O', 'M', 'M', 'A', 'N', 'D', 'E', 'R', '"', ' ', ':',
@@ -106,8 +80,7 @@ int main()
         printf("%c", s[c]);
         delay(250);
     }
-    loadingBar();
-    //Sleep(1000);
+    loadingBar(); //loading bar
     printf("\n\n\n\n\t\t Press any key to start.");
     getch();
 
@@ -115,6 +88,8 @@ int main()
 
     int totalEnemies = 0;
     Initial(sizex, sizey, &totalEnemies, enemy, enemyShielded, world); /*initialising world*/
+
+    /* */
 
     world[sizey - 1][sizex / 2] = player;
     int i = 1;
@@ -130,197 +105,45 @@ int main()
 
         /*display world*/
 
-        display(sizex, sizey, score, world); //displaying world
+        display(sizex, sizey, score, world);
+
+        /*/
+
+        /*laser time*/
+
+        laser(sizex, sizey, &i, enemyLaser, enemy, enemyShielded, world);
+
+        /* */
+
+        /*Disappearing enemy after shooting*/
+
+        disapper(sizex, sizey, &yi, &i, &currentEnemies, &victory, &score, player, playerLaser, &enemyReady, explosion, enemyLaser, enemy, enemyShielded, world);
 
         /**/
-        /*laser time*/
-        for (x = 0; x < sizex; x++)
-        {
-            for (y = sizey - 1; y >= 0; y--)
-            {
-                if (i % 2 == 0 && world[y][x] == enemyLaser && (world[y + 1][x] != enemy & world[y + 1][x] != enemyShielded))
-                {
-                    world[y + 1][x] = enemyLaser;
-                    world[y][x] = ' ';
-                }
-                else if (i % 2 == 0 && world[y][x] == enemyLaser && (world[y + 1][x] == enemy | world[y + 1][x] == enemyShielded))
-                {
-                    world[y][x] = ' ';
-                }
-            }
-        }
-        for (x = 0; x < sizex; x++)
-        {
-            for (y = 0; y < sizey; y++)
-            {
-                if ((i % 5) == 0 && (world[y][x] == enemyShielded | world[y][x] == enemy) && (rand() % 15) > 13 && world[y + 1][x] != playerLaser)
-                {
-                    for (yi = y + 1; yi < sizey; yi++)
-                    {
-                        if (world[yi][x] == enemy | world[yi][x] == enemyShielded)
-                        {
-                            enemyReady = 0;
-                            break;
-                        }
-                        enemyReady = 1;
-                    }
-                    if (enemyReady)
-                    {
-                        world[y + 1][x] = enemyLaser;
-                    }
-                }
-                if (world[y][x] == playerLaser && world[y - 1][x] == enemy)
-                {
-                    world[y][x] = ' ';
-                    world[y - 1][x] = explosion;
-                    currentEnemies--;
-                    score = score + 50;
-                }
-                else if (world[y][x] == playerLaser && world[y - 1][x] == enemyShielded)
-                {
-                    world[y][x] = ' ';
-                    world[y - 1][x] = enemy;
-                    currentEnemies--;
-                    score = score + 50;
-                }
-                else if (world[y][x] == playerLaser && world[y - 1][x] == enemyLaser)
-                {
-                    world[y][x] = ' ';
-                }
-                else if (world[y][x] == explosion)
-                {
-                    world[y][x] = ' ';
-                }
-                else if ((i + 1) % 2 == 0 && world[y][x] == enemyLaser && world[y + 1][x] == player)
-                {
-                    world[y + 1][x] = explosion;
-                    world[y][x] = ' ';
-                    victory = 0;
-                }
-                else if (world[y][x] == playerLaser && world[y - 1][x] != enemyLaser)
-                {
-                    world[y][x] = ' ';
-                    world[y - 1][x] = playerLaser;
-                }
-            }
-        }
 
         /*update enemy direction*/
-        for (y = 0; y < sizey; y++)
-        {
-            if (world[y][0] == enemy)
-            {
-                direction = 'r';
-                drop = 1;
-                break;
-            }
-            if (world[y][sizex - 1] == enemy)
-            {
-                direction = 'l';
-                drop = 1;
-                break;
-            }
-        }
+
+        e_direction(y, sizex, sizey, enemy, direction, &drop, world);
+
+        /* */
 
         /*update board*/
-        if (i % enemySpeed == 0)
-        {
-            if (direction == 'l')
-            {
-                for (x = 0; x < sizex - 1; x++)
-                {
-                    for (y = 0; y < sizey; y++)
-                    {
-                        if (drop && (world[y - 1][x + 1] == enemy || world[y - 1][x + 1] == enemyShielded))
-                        {
-                            world[y][x] = world[y - 1][x + 1];
-                            world[y - 1][x + 1] = ' ';
-                        }
-                        else if (!drop && (world[y][x + 1] == enemy || world[y][x + 1] == enemyShielded))
-                        {
-                            world[y][x] = world[y][x + 1];
-                            world[y][x + 1] = ' ';
-                        }
-                    }
-                }
-            }
-            else
-            {
-                for (x = sizex; x > 0; x--)
-                {
-                    for (y = 0; y < sizey; y++)
-                    {
-                        if (drop && (world[y - 1][x - 1] == enemy || world[y - 1][x - 1] == enemyShielded))
-                        {
-                            world[y][x] = world[y - 1][x - 1];
-                            world[y - 1][x - 1] = ' ';
-                        }
-                        else if (!drop && (world[y][x - 1] == enemy || world[y][x - 1] == enemyShielded))
-                        {
-                            world[y][x] = world[y][x - 1];
-                            world[y][x - 1] = ' ';
-                        }
-                    }
-                }
-            }
-            for (x = 0; x < sizex; x++)
-            {
-                if (world[sizey - 1][x] == enemy)
-                {
-                    victory = 0;
-                }
-            }
-        }
 
-        //player move and shoot
+        board(sizex, sizey, &enemySpeed, &i, direction, x, y, &drop, enemy, enemyShielded, &victory, world);
+        /* */
+
+        /*player move and shoot*/
+
         control(sizex, sizey, laserReady, playerLaser, player, keyPress, world);
-        /////
+        /* */
         i++;
         Sleep(50);
     }
-    system("cls");
-    printf("     SCORE:    %d", score);
-    printf("\n");
-    for (y = 0; y < sizey; y++)
-    {
-        printf("|");
-        for (x = 0; x < sizex; x++)
-        {
-            printf("%c", world[y][x]);
-        }
-        printf("|");
-        printf("\n");
-    }
-    Sleep(1000);
-    system("cls");
-    if (victory != 0)
-    {
-        printf("\n \n \n \n \n \n               CONGRATULATIONS! \n \n \n \n \n");
-        Sleep(1000);
-        printf("\n \n               Score: %d", score);
-        Sleep(1000);
-        int bonus = totalEnemies * 20 - i;
-        printf("\n \n               Bonus: %d", bonus);
-        Sleep(1000);
-        printf("\n \n               Total Score: %d", score + bonus);
-        printf("\n \n \n \n               Well done");
-        Sleep(1000);
-        printf(", Hero.");
-        Sleep(1000);
-        getch();
-    }
-    else
-    {
-        printf("\n \n \n \n \n \n               You have failed.");
-        Sleep(1000);
-        printf("\n \n \n \n \n \n               Windows is doomed.");
-        Sleep(1000);
-        printf("\n \n               Final Score: %d", score);
-        getch();
-    }
 
-    /*
+    /*end Game*/
+
     int bonus = totalEnemies * 20 - i;
     end(sizex, sizey, i, score, totalEnemies, bonus, victory, world);
-    */
+
+    /* */
 }

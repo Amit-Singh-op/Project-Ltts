@@ -2,10 +2,11 @@
 #include <stdio.h>
 #include <Windows.h>
 #include <stdbool.h>
+#include <conio.h>
 
-void end(int sizex, int sizey, int i, int score, int totalEnemies, int bonus, int victory, char (*world)[sizex])
+void end(int sizex, int sizey, int i, int score, int totalEnemies, int bonus, int victory, char world[][sizex])
 {
-    system("cls");
+    /*system("cls");
     printf("     SCORE:    %d", score);
     printf("\n");
     for (int y = 0; y < sizey; y++)
@@ -18,6 +19,7 @@ void end(int sizex, int sizey, int i, int score, int totalEnemies, int bonus, in
         printf("|");
         printf("\n");
     }
+    */
     Sleep(1000);
     system("cls");
     if (victory != 0)
@@ -26,7 +28,6 @@ void end(int sizex, int sizey, int i, int score, int totalEnemies, int bonus, in
         Sleep(1000);
         printf("\n \n               Score: %d", score);
         Sleep(1000);
-        int bonus = totalEnemies * 20 - i;
         printf("\n \n               Bonus: %d", bonus);
         Sleep(1000);
         printf("\n \n               Total Score: %d", score + bonus);
@@ -40,7 +41,7 @@ void end(int sizex, int sizey, int i, int score, int totalEnemies, int bonus, in
     {
         printf("\n \n \n \n \n \n               You have failed.");
         Sleep(1000);
-        printf("\n \n \n \n \n \n               Windows is doomed.");
+        printf("\n \n               Game is Over.");
         Sleep(1000);
         printf("\n \n               Final Score: %d", score);
         getch();

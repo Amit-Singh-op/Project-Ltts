@@ -5,7 +5,7 @@
 #include <Windows.h>
 #include <stdbool.h>
 #include <time.h>
-void control(int sizex, int sizey, char laserReady, char playerLaser, char player, char keyPress, char (*world)[sizex])
+void control(int sizex, int sizey, char laserReady, char playerLaser, char player, char keyPress, char world[][sizex])
 {
     if (kbhit())
     {

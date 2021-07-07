@@ -6,6 +6,11 @@ src/Displayworld.c \
 src/Color.c \
 src/Loading.c \
 src/Control.c \
+src/End_.c \
+src/laserenemy.c \
+src/Enemydisapper.c \
+src/Enemy_direction.c \
+src/update_board.c \
 
 INC_H = inc
 

@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <Windows.h>
 #include <stdbool.h>
-void display(int sizex, int sizey, int score, char (*world)[sizex])
+void display(int sizex, int sizey, int score, char world[][sizex])
 {
     system("cls");
     textcolor(11);
@@ -16,12 +16,12 @@ void display(int sizex, int sizey, int score, char (*world)[sizex])
         {
             if (world[y][x] == 'E')
             {
-                textcolor(12);
+                textcolor(5);
                 printf("%c", world[y][x]);
             }
             else if (world[y][x] == 'B')
             {
-                textcolor(7);
+                textcolor(6);
                 printf("%c", world[y][x]);
             }
             else if (world[y][x] == 'A')
@@ -31,12 +31,12 @@ void display(int sizex, int sizey, int score, char (*world)[sizex])
             }
             else if (world[y][x] == '*')
             {
-                textcolor(15);
+                textcolor(12);
                 printf("%c", world[y][x]);
             }
             else if (world[y][x] == 'U')
             {
-                textcolor(15);
+                textcolor(8);
                 printf("%c", world[y][x]);
             }
             else
