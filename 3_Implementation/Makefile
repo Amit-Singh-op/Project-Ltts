@@ -14,7 +14,15 @@ src/update_board.c \
 src/welcome.c \
 src/ShowConsole.c \
 
+# All test source files
+TEST_SRC = test/test.c\
+unity/unity.c
+
+
+COV_SRC = test.c
+
 INC_H = inc
+INC_T = unity
 
 ifdef OS
    RM = del /q
@@ -35,6 +43,33 @@ all:
 	
 run:
 	./$(call FixPath,$(PROJ_NAME).$(EXEC))
+
+test:
+	gcc -I $(INC_H) -I $(INC_T) $(TEST_SRC) $(SRC) -o $(call FixPath,$(TEST_PROJ_NAME).$(EXEC)) -lm
+	./$(call FixPath,$(TEST_PROJ_NAME).$(EXEC))
+
+coverage:
+	
+	gcc -fprofile-arcs -ftest-coverage -I $(INC_H) -I $(INC_T) unity/unity.c  test/test.c $(SRC) -o $(call FixPath, $(TEST_PROJ_NAME).$(EXEC)) -lm
+	$(call FixPath, ./$(TEST_PROJ_NAME).$(EXEC))
+	gcov -a $(COV_SRC)
+	$(RM) *.$(EXEC)
+	$(RM) *.gcda
+	$(RM) *.gcno
+	$(RM) *.c.gcov
+	$(RM) *.DAT
+	
+
+
+cppcheck:
+	cppcheck --enable=all $(SRC) ASCII_SPACE_INVADER.c
+
+debug:
+	gcc -I $(INC_H) $(SRC) main.c -g -o $(PROJ_NAME).$(EXEC) -lm
+	gdb $(PROJ_NAME).$(EXEC)
+
+valgrind:
+	valgrind ./$(TEST_PROJ_NAME).$(EXEC)
 
 clean:
 	$(RM) *.DAT

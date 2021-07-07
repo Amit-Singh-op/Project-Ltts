@@ -7,7 +7,9 @@ void setUp() {}
 /* Required by the unity test framework */
 void tearDown() {}
 
-void check() {}
+void check(void)
+{
+}
 
 int main()
 {
