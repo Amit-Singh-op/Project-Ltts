@@ -1,5 +1,5 @@
 /* ==========================================
-    Unity Project - A Test Framework for C
+    Unity Project - A Test Framework for C/c++
     Copyright (c) 2007-21 Mike Karlesky, Mark VanderVoord, Greg Williams
     [Released under MIT License. Please refer to license.txt for details]
 ========================================== */

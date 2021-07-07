@@ -1,5 +1,5 @@
 /* ==========================================
-    Unity Project - A Test Framework for C
+    Unity Project - A Test Framework for C/c++
     Copyright (c) 2007-21 Mike Karlesky, Mark VanderVoord, Greg Williams
     [Released under MIT License. Please refer to license.txt for details]
 ========================================== */
@@ -20,39 +20,39 @@ extern "C"
 
 #include "unity_internals.h"
 
-    /*-------------------------------------------------------
+   /*-------------------------------------------------------
  * Test Setup / Teardown
  *-------------------------------------------------------*/
 
-    /* These functions are intended to be called before and after each test.
+   /* These functions are intended to be called before and after each test.
  * If using unity directly, these will need to be provided for each test
  * executable built. If you are using the test runner generator and/or
  * Ceedling, these are optional. */
-    void setUp(void);
-    void tearDown(void);
+   void setUp(void);
+   void tearDown(void);
 
-    /* These functions are intended to be called at the beginning and end of an
+   /* These functions are intended to be called at the beginning and end of an
  * entire test suite.  suiteTearDown() is passed the number of tests that
  * failed, and its return value becomes the exit code of main(). If using
  * Unity directly, you're in charge of calling these if they are desired.
  * If using Ceedling or the test runner generator, these will be called
  * automatically if they exist. */
-    void suiteSetUp(void);
-    int suiteTearDown(int num_failures);
+   void suiteSetUp(void);
+   int suiteTearDown(int num_failures);
 
-    /*-------------------------------------------------------
+   /*-------------------------------------------------------
  * Test Reset and Verify
  *-------------------------------------------------------*/
 
-    /* These functions are intended to be called before during tests in order
+   /* These functions are intended to be called before during tests in order
  * to support complex test loops, etc. Both are NOT built into Unity. Instead
  * the test runner generator will create them. resetTest will run teardown and
  * setup again, verifying any end-of-test needs between. verifyTest will only
  * run the verification. */
-    void resetTest(void);
-    void verifyTest(void);
+   void resetTest(void);
+   void verifyTest(void);
 
-    /*-------------------------------------------------------
+   /*-------------------------------------------------------
  * Configuration Options
  *-------------------------------------------------------
  * All options described below should be passed as a compiler flag to all files using Unity. If you must add #defines, place them BEFORE the #include above.
@@ -111,12 +111,12 @@ extern "C"
 /* It is not necessary for you to call PASS. A PASS condition is assumed if nothing fails.
  * This method allows you to abort a test immediately with a PASS state, ignoring the remainder of the test. */
 #define TEST_PASS() TEST_ABORT()
-#define TEST_PASS_MESSAGE(message)         \
-    do                                     \
-    {                                      \
-        UnityMessage((message), __LINE__); \
-        TEST_ABORT();                      \
-    } while (0)
+#define TEST_PASS_MESSAGE(message)       \
+   do                                    \
+   {                                     \
+      UnityMessage((message), __LINE__); \
+      TEST_ABORT();                      \
+   } while (0)
 
 /* This macro does nothing, but it is useful for build tools (like Ceedling) to make use of this to figure out
  * which files should be linked to in order to perform a test. Use it like TEST_FILE("sandwiches.c") */
