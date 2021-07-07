@@ -14,17 +14,17 @@ void display(int sizex, int sizey, int score, char world[][sizex])
         printf("\t\t\t\t\t|");
         for (int x = 0; x < sizex; x++)
         {
-            if (world[y][x] == 'E')
+            if (world[y][x] == '0')
             {
-                textcolor(5);
+                textcolor(7);
                 printf("%c", world[y][x]);
             }
-            else if (world[y][x] == 'B')
+            else if (world[y][x] == 'O')
             {
-                textcolor(6);
+                textcolor(11);
                 printf("%c", world[y][x]);
             }
-            else if (world[y][x] == 'A')
+            else if (world[y][x] == '^')
             {
                 textcolor(14);
                 printf("%c", world[y][x]);
@@ -34,7 +34,7 @@ void display(int sizex, int sizey, int score, char world[][sizex])
                 textcolor(12);
                 printf("%c", world[y][x]);
             }
-            else if (world[y][x] == 'U')
+            else if (world[y][x] == 'o')
             {
                 textcolor(8);
                 printf("%c", world[y][x]);

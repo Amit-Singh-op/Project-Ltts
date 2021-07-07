@@ -14,12 +14,12 @@ int main()
     const int sizex = 40;
     int x, y, yi;
     char world[sizey][sizex];
-    char player = 'A';
+    char player = '^';
     char playerLaser = '*';
-    char enemy = 'E';
-    char enemyShielded = 'B';
-    char enemyLaser = 'U';
-    char explosion = 'X';
+    char enemy = '0';
+    char enemyShielded = 'O';
+    char enemyLaser = 'o';
+    char explosion = 'x';
     int score = 0;
     int victory = 1;
     int laserReady = 1;
@@ -30,8 +30,8 @@ int main()
     /*welcome screen*/
     screen();
 
-    /* */
     loadingBar(); //loading bar
+    printf("\n");
 
     /*printf("\n\n\n\n\t\t Press any key to start.");
     getch();
@@ -42,7 +42,6 @@ int main()
     Initial(sizex, sizey, &totalEnemies, enemy, enemyShielded, world); /*initialising world*/
 
     /* */
-
     world[sizey - 1][sizex / 2] = player;
     int i = 1;
     char direction = 'l';
@@ -98,5 +97,6 @@ int main()
     end(sizex, sizey, i, score, totalEnemies, bonus, victory, world);
 
     /*  */
+    Sleep(500);
     return 0;
 }
