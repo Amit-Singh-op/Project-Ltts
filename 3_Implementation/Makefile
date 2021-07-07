@@ -11,6 +11,8 @@ src/laserenemy.c \
 src/Enemydisapper.c \
 src/Enemy_direction.c \
 src/update_board.c \
+src/welcome.c \
+src/ShowConsole.c \
 
 INC_H = inc
 
