@@ -14,4 +14,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: run
-      run: .\ASCII_SPACE_INVADER.exe
+      run: 3_Implementation\ASCII_SPACE_INVADER.exe
