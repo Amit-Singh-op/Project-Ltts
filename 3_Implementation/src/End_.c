@@ -35,7 +35,7 @@ void end(int sizex, int sizey, int i, int score, int totalEnemies, int bonus, in
         Sleep(1000);
         printf(", Hero.");
         Sleep(1000);
-        getch();
+        //getch();
     }
     else
     {
@@ -44,6 +44,6 @@ void end(int sizex, int sizey, int i, int score, int totalEnemies, int bonus, in
         printf("\n \n               Game is Over.");
         Sleep(1000);
         printf("\n \n               Final Score: %d", score);
-        getch();
+        //getch();
     }
 }

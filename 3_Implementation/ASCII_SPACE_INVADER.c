@@ -81,7 +81,7 @@ int main()
         delay(250);
     }
     //loadingBar(); //loading bar
-    printf("\n\n\n\n\t\t Press any key to start.");
+    /*printf("\n\n\n\n\t\t Press any key to start.");
     getch();
 
     /*initialise world*/
@@ -146,4 +146,5 @@ int main()
     end(sizex, sizey, i, score, totalEnemies, bonus, victory, world);
 
     /*  */
+    return 0;
 }
