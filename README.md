@@ -1,5 +1,3 @@
-## ReadMe
-
 ## Stepin-Mini-Project
 
 ## Build
