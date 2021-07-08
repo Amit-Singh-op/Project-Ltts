@@ -22,6 +22,8 @@ You can play whenever you want to and it's fun playing this kinda games when you
 
 ## SWOT Analysis
 
+![SWOT ANALYIS](https://github.com/Amit-Singh-op/Project-Ltts/blob/main/1_Requirement/swat.png)
+
 ## **Features**
 
 - To shoot enemy and not letting them to invade your space.
