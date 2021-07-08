@@ -10,7 +10,7 @@
 
 Space Invaders is a fixed shooter in which the player moves a laser cannon horizontally across the bottom of the screen and fires at aliens overhead. The aliens begin as five rows of eleven that move left and right as a group, shifting downward each time they reach a screen edge. The goal is to eliminate all of the aliens by shooting them. While the player has three lives, the game ends immediately if the invaders reach the bottom of the screen. The aliens attempt to destroy the player's cannon by firing projectiles.
 
-I looked up for best ascii invader game which can run into my machine without using graphics and i found it on youtube.
+I looked up for best ascii invader game which can run into my machine without using graphics and I found it on youtube.
 
 ### Benefits
 
@@ -19,6 +19,8 @@ You can play whenever you want to and it's fun playing this kinda games when you
 ## Cost and Features
 
  No cost required to play the game.
+
+## SWOT Analysis
 
 ## **Features**
 
@@ -61,6 +63,6 @@ Algorithm is a lil bit complicated but yet understandable.
 |ID| Description | Status
 |--|--|--|
 | LL1 | initial world and Player in main() |Implemented
-| LL2 | Call to 8 functions | Implemented
+| LL2 | Call to multiple functions in order to make it runnable | Implemented
 | LL3 | Go through each function to check requirement is meeting or not | Implemented
 | LL4 | Then print the End Game screen, depending on how player played the game  | Implemented
