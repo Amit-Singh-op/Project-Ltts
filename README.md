@@ -14,7 +14,6 @@ As aliens are defeated, their movement and the game go on. Defeating all the ali
 
 ![Example](https://github.com/Amit-Singh-op/Project-Ltts/blob/main/7_Others/Output%20(2).png)
 
-
 ## Folders
 
 The project is divided into 7 folders:-
