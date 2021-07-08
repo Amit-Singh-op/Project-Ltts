@@ -12,8 +12,8 @@ Space Invaders is a fixed shooter in which the player moves a laser cannon horiz
 
 As aliens are defeated, their movement and the game go on. Defeating all the aliens brings an end screen that shows your score.
 
-![Example](https://github.com/Roopesh16/Stepin-Mini-Project/blob/main/7_Others/ex.png)
-![Solution](https://github.com/Roopesh16/Stepin-Mini-Project/blob/main/7_Others/sol.png)
+![Example](https://github.com/Amit-Singh-op/Project-Ltts/blob/main/7_Others/Output%20(2).png)
+
 
 ## Folders
 
