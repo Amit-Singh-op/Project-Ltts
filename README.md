@@ -4,7 +4,7 @@ Build |
 ------|![example workflow](https://github.com/Amit-Singh-op/Project-Ltts/actions/workflows/cpp.yml/badge.svg)  
 
 Code Quality |
--------------|[![Code Grade](https://www.code-inspector.com/project/24680/score/svg)](https://www.code-inspector.com/project/24680/status/svg)  [![Code Quality Score](https://www.code-inspector.com/project/24680/status/svg)](https://frontend.code-inspector.com/project/24680/dashboard)
+-------------| [![Code Grade](https://www.code-inspector.com/project/24680/score/svg)](https://www.code-inspector.com/project/24680/status/svg)  [![Code Quality Score](https://www.code-inspector.com/project/24680/status/svg)](https://frontend.code-inspector.com/project/24680/dashboard)
 
 Unity |
 ------|
