@@ -55,7 +55,7 @@ coverage:
 	$(call FixPath, ./$(TEST_PROJ_NAME).$(EXEC))
 	gcov -a $(COV_SRC)
 	$(RM) *.$(EXEC)
-#	$(RM) *.gcda
+	$(RM) *.gcda
 	$(RM) *.gcno
 	$(RM) *.c.gcov
 	$(RM) *.DAT
