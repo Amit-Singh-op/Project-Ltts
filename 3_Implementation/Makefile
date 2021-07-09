@@ -25,7 +25,7 @@ COV_SRC = test.c
 INC_H = inc
 INC_T = unity
 
-ifdef OS
+ifeq OS
    RM = del /q
    FixPath = $(subst /,\,$1)
    EXEC = exe
