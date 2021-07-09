@@ -1,4 +1,4 @@
-#include "fun.h";
+#include "fun.h"
 int i_value(int wrong)
 {
     if (wrong == 1)
