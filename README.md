@@ -1,19 +1,8 @@
 ## Stepin-Mini-Project
 
-Build |
-------|
-![example workflow](https://github.com/Amit-Singh-op/Project-Ltts/actions/workflows/cpp.yml/badge.svg)  
-
-Code Quality |
--------------|
-[![Code Grade](https://www.code-inspector.com/project/24680/score/svg)](https://www.code-inspector.com/project/24680/status/svg)  [![Code Quality Score](https://www.code-inspector.com/project/24680/status/svg)](https://frontend.code-inspector.com/project/24680/dashboard)
-
-Unity |
-------|
-
-Git_Inspector |
---------------|
-[![Contribution Check - Git Inspector](https://github.com/Amit-Singh-op/Project-Ltts/actions/workflows/Git_Inspector.yml/badge.svg)](https://github.com/Amit-Singh-op/Project-Ltts/actions/workflows/Git_Inspector.yml)
+Build | Code Quality | Git_Inspector | Unity |
+------| -------------| --------------| ------|
+![example workflow](https://github.com/Amit-Singh-op/Project-Ltts/actions/workflows/cpp.yml/badge.svg) |  [![Code Grade](https://www.code-inspector.com/project/24680/score/svg)](https://www.code-inspector.com/project/24680/status/svg) <br> [![Code Quality Score](https://www.code-inspector.com/project/24680/status/svg)](https://frontend.code-inspector.com/project/24680/dashboard) |  [![Contribution Check - Git Inspector](https://github.com/Amit-Singh-op/Project-Ltts/actions/workflows/Git_Inspector.yml/badge.svg)](https://github.com/Amit-Singh-op/Project-Ltts/actions/workflows/Git_Inspector.yml)
 
 This project is ASCII SPACE INVADERS Game.
 
