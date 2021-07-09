@@ -1,7 +1,8 @@
 ## Stepin-Mini-Project
 
 Build |
-------| ![example workflow](https://github.com/Amit-Singh-op/Project-Ltts/actions/workflows/cpp.yml/badge.svg)  
+------|
+![example workflow](https://github.com/Amit-Singh-op/Project-Ltts/actions/workflows/cpp.yml/badge.svg)  
 
 Code Quality |
 -------------|
