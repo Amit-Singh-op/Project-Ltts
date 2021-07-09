@@ -13,5 +13,11 @@ void e_direction(int y, int sizex, int sizey, char enemy, char direction, int *d
 void board(int sizex, int sizey, int *enemySpeed, int *i, char direction, int x, int y, int *drop, char enemy, char enemyShielded, int *victory, char world[][sizex]);
 void screen();
 void ShowConsoleCursor(bool showFlag);
-int i_value(int wrong);
+
+typedef enum check
+{
+    SUCCESS,
+    NULL_PTR,
+} check;
+check extract_string(const char *in_string, char *out_string);
 #endif

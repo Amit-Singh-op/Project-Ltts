@@ -7,20 +7,19 @@ void setUp() {}
 /* Required by the unity test framework */
 void tearDown() {}
 
-void i_run()
+void test_null_inputs(void)
 {
-    TEST_ASSERT_EQUAL(2, i_value(1));
-    TEST_ASSERT_EQUAL(3, i_value(2));
-    TEST_ASSERT_EQUAL(4, i_value(3));
-    TEST_ASSERT_EQUAL(3, i_value(4));
-    TEST_ASSERT_EQUAL(3, i_value(5));
-    TEST_ASSERT_EQUAL(5, i_value(6));
-    TEST_ASSERT_EQUAL(5, i_value(7));
+    char *ouput_string = " ";
+    char *test_string = " ";
+
+    TEST_ASSERT_EQUAL(NULL_PTR, extract_string(NULL, ouput_string));
+    TEST_ASSERT_EQUAL(NULL_PTR, extract_string(test_string, NULL));
+    TEST_ASSERT_EQUAL(NULL_PTR, extract_string(NULL, NULL));
 }
 
 int main()
 {
     UNITY_BEGIN();
-    RUN_TEST(i_run);
+    RUN_TEST(test_null_inputs);
     return UNITY_END();
 }
