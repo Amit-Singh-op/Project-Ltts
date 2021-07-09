@@ -13,6 +13,7 @@ src/Enemy_direction.c \
 src/update_board.c \
 src/welcome.c \
 src/ShowConsole.c \
+src/check.c \
 
 # All test source files
 TEST_SRC = test/test.c\
