@@ -14,7 +14,7 @@ As aliens are defeated, their movement and the game go on. Defeating all the ali
 
 ## Folders
 
-The project is divided into 7 folders:-
+The project is divided into 7 folders :-
 
 1. **Requirements** - All the info about project requirements.
 2. **Design** - UML Diagrams.
