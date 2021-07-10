@@ -1,8 +1,6 @@
 PROJ_NAME = ASCII_SPACE_INVADER
 TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
-BUILD_DIR = build
-
 SRC =src/Initialise_world.c \
 src/Displayworld.c \
 src/Color.c \
@@ -26,9 +24,6 @@ COV_SRC = test.c
 
 INC_H = inc
 INC_T = unity
-
-INC = -Iinc\
--Iunity
 
 ifdef OS
    RM = del /q
@@ -54,22 +49,16 @@ test:
 	gcc -I $(INC_H) -I $(INC_T) $(TEST_SRC) $(SRC) -o $(call FixPath,$(TEST_PROJ_NAME).$(EXEC)) -lm
 	./$(call FixPath,$(TEST_PROJ_NAME).$(EXEC))
 
-#coverage:
+coverage:
 	
-#	gcc -fprofile-arcs -ftest-coverage -I $(INC_H) -I $(INC_T) unity/unity.c  test/test.c $(SRC) -o $(call FixPath, $(TEST_PROJ_NAME).$(EXEC)) -lm
-#	$(call FixPath, ./$(TEST_PROJ_NAME).$(EXEC))
-#	gcov -a $(COV_SRC)
+	gcc -fprofile-arcs -ftest-coverage -I $(INC_H) -I $(INC_T) unity/unity.c  test/test.c $(SRC) -o $(call FixPath, $(TEST_PROJ_NAME).$(EXEC)) -lm
+	$(call FixPath, ./$(TEST_PROJ_NAME).$(EXEC))
+	gcov -a $(COV_SRC)
 #	$(RM) *.$(EXEC)
 #	$(RM) *.gcda
 #	$(RM) *.gcno
 #	$(RM) *.c.gcov
 #	$(RM) *.DAT
-
-
-coverage:${PROJECT_NAME}
-	gcc -fprofile-arcs -ftest-coverage $(TEST_SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
-	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
-	gcov -a $(SRC)
 	
 
 
