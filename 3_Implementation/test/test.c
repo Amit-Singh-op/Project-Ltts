@@ -16,7 +16,8 @@ void Low1(void)
 {
     char player[10] = "Dead";
     int hit = 0;
-    TEST_ASSERT_EQUAL(YOU_HIT_BY_AN_ENEMY, hit_byenemy(hit, player));
+    TEST_ASSERT_EQUAL(YOU_WIN, Game_Over(0, player));
+    //TEST_ASSERT_EQUAL(YOU_HIT_BY_AN_ENEMY, hit_byenemy(hit, player));
 }
 
 int main()
