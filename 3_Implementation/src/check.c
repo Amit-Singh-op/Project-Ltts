@@ -11,9 +11,13 @@ check Game_Over(const int count_enemy, char *player)
         {
             return YOU_WIN;
         }
-        else
+    }
+    else if (count_enemy > 0)
+    {
+        char *check = "Dead";
+        if (strcmp(player, check) == 0)
         {
-            YOU_HIT_BY_AN_ENEMY;
+            return YOU_HIT_BY_AN_ENEMY;
         }
     }
 }
