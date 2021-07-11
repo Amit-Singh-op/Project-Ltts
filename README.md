@@ -6,7 +6,7 @@ Build | Code Quality | Git_Inspector | Unity | Coverage |
 
 This project is ASCII SPACE INVADERS Game.
 
-Space Invaders is a fixed shooter in which the player moves a laser cannon horizontally across the bottom of the screen and fires at aliens overhead. The aliens begin as five rows of eleven that move left and right as a group, shifting downward each time they reach a screen edge. The goal is to eliminate all of the aliens by shooting them. The game ends immediately if the invaders reach the bottom of the screen.
+Space Invaders is a fixed shooter in which the player moves a laser cannon horizontally across the bottom of the screen and fires at aliens overhead. The aliens begin as four rows of fifteen that move left and right as a group, shifting downward each time they reach a screen edge. The goal is to eliminate all of the aliens by shooting them. The game ends immediately if the invaders reach the bottom of the screen.
 
 As aliens are defeated, their movement and the game go on. Defeating all the aliens brings an end screen that shows your score.
 
@@ -22,4 +22,4 @@ The project is divided into 7 folders :-
 4. **Test Plan** - Haven't done yet.
 5. **Report** - Haven't done yet.
 6. **Images and Videos** - Images and videos of the project
-7. **Others** - Other files and folders.
+7. **Others** - Other files and folders .
