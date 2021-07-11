@@ -15,7 +15,7 @@ void High(void)
 void Low1(void)
 {
     char player[10] = "Dead";
-    char hit[5] = "yes";
+    int hit = 0;
     TEST_ASSERT_EQUAL(YOU_HIT_BY_AN_ENEMY, hit_by_enemy(hit, player));
 }
 
@@ -23,5 +23,6 @@ int main()
 {
     UNITY_BEGIN();
     RUN_TEST(High);
+    RUN_TEST(Low1);
     return UNITY_END();
 }
