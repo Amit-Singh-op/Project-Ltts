@@ -16,8 +16,8 @@ void ShowConsoleCursor(bool showFlag);
 
 typedef enum check
 {
-    SUCCESS,
-    NULL_PTR,
+    YOU_WIN,
+    YOU_FAILED,
 } check;
-check extract_string(const char *in_string, char *out_string);
+check Over(const int count_enemy, const char *player);
 #endif

@@ -9,10 +9,8 @@ void tearDown() {}
 
 void success(void)
 {
-    char *ouput_string = " ";
-    char *test_string = " ";
-
-    TEST_ASSERT_EQUAL(SUCCESS, extract_string(NULL, ouput_string));
+    const char player[10] = "Alive";
+    TEST_ASSERT_EQUAL(YOU_WIN, Over(0, player));
 }
 
 int main()
