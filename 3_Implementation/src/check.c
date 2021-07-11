@@ -1,7 +1,8 @@
 #include "fun.h"
 #include <stdio.h>
+#include <string.h>
 
-check Over(const int count_enemy, char *player)
+check Game_Over(const int count_enemy, char *player)
 {
     if (count_enemy == 0)
     {
