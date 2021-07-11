@@ -19,7 +19,7 @@ The project is divided into 7 folders :-
 1. **Requirements** - All the info about project requirements.
 2. **Design** - UML Diagrams.
 3. **Implementation** - Source code and Header files.
-4. **Test Plan** - Haven't done yet.
-5. **Report** - Haven't done yet.
+4. **Test Plan** - Input and Output.
+5. **Report** - Report.
 6. **Images and Videos** - Images and videos of the project
 7. **Others** - Other files and folders .
