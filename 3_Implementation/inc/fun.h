@@ -19,7 +19,9 @@ typedef enum check
     YOU_WIN,
     YOU_FAILED,
     YOU_HIT_BY_AN_ENEMY,
+    LASER_ENEEMY_CANT_BE_KILLED_BY_PLAYERS_SHOT,
     ERROR_,
 } check;
 check Game_Over(const int count_enemy, char *player);
+check Compilation_error(char *laser_enemy);
 #endif
