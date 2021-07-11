@@ -20,7 +20,7 @@ void Low1(void)
 void Low2(void)
 {
     char laser_enemy[10] = "Killed";
-    TEST_ASSERT_EQUAL(LASER_ENEEMY_CANT_BE_KILLED_BY_PLAYERS_SHOT, Compilation_error(laser_enemy));
+    TEST_ASSERT_EQUAL(LASER_ENEMY_CANT_BE_KILLED_BY_PLAYERS_SHOT, Compilation_error(laser_enemy));
 }
 
 int main()

@@ -26,6 +26,6 @@ check Compilation_error(char *laser_enemy)
     char *check = "Killed";
     if (strcmp(laser_enemy, check) == 0)
     {
-        return LASER_ENEEMY_CANT_BE_KILLED_BY_PLAYERS_SHOT;
+        return LASER_ENEMY_CANT_BE_KILLED_BY_PLAYERS_SHOT;
     }
 }
