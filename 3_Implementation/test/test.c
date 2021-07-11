@@ -9,7 +9,7 @@ void tearDown() {}
 
 void success(void)
 {
-    const char player[10] = "Alive";
+    char player[10] = "Alive";
     TEST_ASSERT_EQUAL(YOU_WIN, Over(0, player));
 }
 

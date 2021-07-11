@@ -19,5 +19,5 @@ typedef enum check
     YOU_WIN,
     YOU_FAILED,
 } check;
-check Over(const int count_enemy, const char *player);
+check Over(const int count_enemy, char *player);
 #endif

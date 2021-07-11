@@ -1,10 +1,12 @@
 #include "fun.h"
+#include <stdio.h>
 
-check Over(const int count_enemy, const char *player)
+check Over(const int count_enemy, char *player)
 {
     if (count_enemy == 0)
     {
-        if (*player == "Alive")
+        char *check = "Alive";
+        if (strcmp(player, check) == 0)
         {
             return YOU_WIN;
         }
