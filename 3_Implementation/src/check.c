@@ -13,7 +13,7 @@ check Game_Over(const int count_enemy, char *player)
         }
         else
         {
-            YOU_FAILED;
+            YOU_HIT_BY_AN_ENEMY;
         }
     }
 }
