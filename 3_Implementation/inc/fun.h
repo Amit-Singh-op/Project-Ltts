@@ -19,7 +19,7 @@ typedef enum check
     YOU_WIN,
     YOU_FAILED,
     YOU_HIT_BY_AN_ENEMY,
-    ERROR,
+    ERROR_,
 } check;
 check Game_Over(const int count_enemy, char *player);
 #endif
