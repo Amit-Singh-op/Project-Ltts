@@ -57,14 +57,14 @@ Algorithm is a lil bit complicated but yet understandable.
 
 |ID| Description | Status
 |--|--|--|
-| HL1 | Contain initial world and Player shoot unless player knocks down all enemies | Implemented
+| HL1 | Game complete if Player shoots ememies and he knocks down all enemies | Implemented
 | HL2 | Print the End Game screen if there is no enemy left else print score only | Implemented
 
 ## Low-Level Requirements
 
 |ID| Description | Status
 |--|--|--|
-| LL1 | initial world and Player in main() |Implemented
-| LL2 | Call to multiple functions in order to make it runnable | Implemented
-| LL3 | Go through each function to check requirement is meeting or not | Implemented
-| LL4 | Then print the End Game screen, depending on how player played the game  | Implemented
+| LL1 | Have seperate functions for each module |Implemented
+| LL2 | Have added color to fire button to make it noticeable | Implemented
+| LL3 | Go through each function to make this game runnable | Implemented
+| LL4 | If player gets killed by laser enemies then show the end screen | Implemented
