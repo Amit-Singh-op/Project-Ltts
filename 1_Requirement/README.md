@@ -4,7 +4,7 @@
 
 - This work is taken from Youtube and this has some improvement on it.
 - For making this project, we require C Programming, makefile and Unit Testing using Unity.
-- ASCII SPACE INVADERS is a game where we move our player(left and right) and shoot enemies to not invade our space
+- ASCII SPACE INVADERS is a game where we move our player(left and right) and shoot enemies to not invade our space.
 
 ## Research
 
