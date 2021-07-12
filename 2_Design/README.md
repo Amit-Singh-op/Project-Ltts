@@ -8,4 +8,4 @@
 ### Use case diagram
 ![Example](https://github.com/Amit-Singh-op/Project-Ltts/blob/main/2_Design/Behavior%20Diagram/Use%20case%20diagram.png)
 ### Activity diagram
-![Intro.pdf](https://github.com/Amit-Singh-op/Project-Ltts/blob/main/2_Design/Activity%20Diagram/Activity%20diagram.pdf)
+![Example](https://github.com/Amit-Singh-op/Project-Ltts/blob/main/2_Design/Activity%20Diagram/Activity%20diagram.pdf)
