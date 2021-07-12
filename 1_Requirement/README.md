@@ -18,7 +18,7 @@ You can play whenever you want to and it's fun playing this kinda games when you
 
 ## Cost and Features
 
- No cost required to play the game .
+ No cost required to play the game.
 
 ## SWOT Analysis
 
