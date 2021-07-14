@@ -39,8 +39,7 @@ endif
 .PHONY: run clean test doc all
 
 all:
-	gcc -I $(INC_H) $(SRC) ASCII_SPACE_INVADER.c -o $(call FixPath,$(PROJ_NAME).$(EXEC)) -lm
-	./$(call FixPath,$(PROJ_NAME).$(EXEC))
+	gcc -I $(INC_H) $(SRC) ASCII_SPACE_INVADER.c -o $(call FixPath,$(PROJ_NAME).$(EXEC))
 	
 run:
 	./$(call FixPath,$(PROJ_NAME).$(EXEC))
