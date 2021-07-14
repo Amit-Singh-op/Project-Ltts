@@ -64,12 +64,6 @@ coverage:
 cppcheck:
 	cppcheck --enable=all $(SRC) ASCII_SPACE_INVADER.c
 
-debug:
-	gcc -I $(INC_H) $(SRC) main.c -g -o $(PROJ_NAME).$(EXEC) -lm
-	gdb $(PROJ_NAME).$(EXEC)
-
-valgrind:
-	valgrind ./$(TEST_PROJ_NAME).$(EXEC)
 
 clean:
 	$(RM) *.DAT
