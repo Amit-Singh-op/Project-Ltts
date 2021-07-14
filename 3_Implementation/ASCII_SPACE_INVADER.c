@@ -1,6 +1,6 @@
 /**
  * @file ASCII_SPACE_INVADER.c
- * @author your name (you@domain.com)
+ * @author Amit Kumar Singh (amitkmwsingh2857421@gmail.com)
  * @brief 
  * @version 0.1
  * @date 2021-07-09
