@@ -39,8 +39,7 @@ endif
 .PHONY: run clean test doc all
 
 all:
-	gcc -I $(INC_H) $(SRC) ASCII_SPACE_INVADER.c -o $(call FixPath,$(PROJ_NAME).$(EXEC)) -lm
-	./$(call FixPath,$(PROJ_NAME).$(EXEC))
+	gcc -I $(INC_H) $(SRC) ASCII_SPACE_INVADER.c -o $(call FixPath,$(PROJ_NAME).$(EXEC))
 	
 run:
 	./$(call FixPath,$(PROJ_NAME).$(EXEC))
@@ -65,12 +64,6 @@ coverage:
 cppcheck:
 	cppcheck --enable=all $(SRC) ASCII_SPACE_INVADER.c
 
-debug:
-	gcc -I $(INC_H) $(SRC) main.c -g -o $(PROJ_NAME).$(EXEC) -lm
-	gdb $(PROJ_NAME).$(EXEC)
-
-valgrind:
-	valgrind ./$(TEST_PROJ_NAME).$(EXEC)
 
 clean:
 	$(RM) *.DAT
